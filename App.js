@@ -1,18 +1,28 @@
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-]);
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// React.createElement =>Object =>ReactDom=>Html
+// JSX =>React.createElement =>ReactElement=>js object =>HtmlElement(render)
+
 // const heading = React.createElement(
-//   "h1",
-//   { id: "heading" },
-//   "Hello World from React"
+//     "h1",
+//     { id: "heading" },
+//     "Namaste React Bhai 🚀"
 // );
+// console.log(heading);
+
+//How do we render it?
+//Through the root
+
+//Jsx - is not html in javascript
+//you can called it as html like syntax or xml like syntax
+const jsxHeading = (<h1 className="root" tabIndex="5"
+>Namaste react using Jsx🚀</h1>);
+
+
+console.log(jsxHeading);
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// root.render(heading);
+root.render(jsxHeading);
